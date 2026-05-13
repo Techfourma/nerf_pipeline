@@ -1,0 +1,30 @@
+# Virtual environments
+nerf_env/
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data and results (optional - uncomment if needed)
+# data/
+# results/
+# checkpoints/

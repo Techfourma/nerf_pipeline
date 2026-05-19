@@ -25,6 +25,8 @@ build/
 Thumbs.db
 
 # Data and results (optional - uncomment if needed)
-# data/
-# results/
-# checkpoints/
+#data/
+results/
+checkpoints/
+*.pt
+metrics.json

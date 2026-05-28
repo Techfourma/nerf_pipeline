@@ -1,7 +1,7 @@
 import controlP5.*;
 import java.io.File;
 
-// ================= GLOBAL VARIABLES =================
+// GLOBAL VARIABLES
 PImage[] frames;
 JSONObject metrics;
 int currentFrame = 0;

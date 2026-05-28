@@ -19,7 +19,6 @@ def export_nerf():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f" Device: {device}")
 
-    # 1. Load Model Terlatih
     print("📦 Loading trained model...")
     model = create_nerf_model(device=device)
     ckpt_path = 'checkpoints/nerf_final.pt'
@@ -31,7 +30,7 @@ def export_nerf():
     model.load_state_dict(ckpt['model_state_dict'])
     model.eval()
 
-    # 2. Konfigurasi (HARUS sama dengan training agar kamera intrinsik cocok)
+    # 2. Konfigurasi
     config = {
         'data_dir': 'data/blender/chair',
         'H': 100, 'W': 100,
@@ -46,11 +45,9 @@ def export_nerf():
     rays_per_img = config['H'] * config['W']
     n_images = test_dataset.n_frames
 
-    # 4. Inisialisasi LPIPS (VGG network)
     print("⚙️ Initializing LPIPS network (mungkin butuh waktu di CPU)...")
     lpips_fn = lpips.LPIPS(net='vgg').to(device).eval()
 
-    # 5. Setup Direktori Output
     os.makedirs('results/frames', exist_ok=True)
     metrics_list = []
 
@@ -93,7 +90,6 @@ def export_nerf():
             'lpips': float(l)
         })
 
-        # Simpan Gambar Render
         Image.fromarray((pred_np * 255).astype(np.uint8)).save(f'results/frames/frame_{i:04d}.png')
 
     # 6. Simpan Summary & Metrik Rata-rata

@@ -24,7 +24,6 @@ build/
 .DS_Store
 Thumbs.db
 
-# Data and results (optional - uncomment if needed)
 #data/
 results/
 checkpoints/

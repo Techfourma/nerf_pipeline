@@ -21,7 +21,6 @@ float avgSSIM = 0;
 
 ControlP5 cp5;
 
-// ================= SETUP =================
 void setup() {
   size(1200, 800, P3D);
   frameRate(30);
@@ -50,7 +49,6 @@ void draw() {
   }
 }
 
-// ================= LOAD METRICS (FIXED!) =================
 void loadMetrics() {
   println("🔍 Loading metrics...");
   String path = "/home/jundi-lesmana/nerf_pipeline/results/metrics.json";
@@ -64,7 +62,6 @@ void loadMetrics() {
       return;
     }
     
-    // FIX: loadJSONObject membaca seluruh file, bukan hanya baris 1
     metrics = loadJSONObject(path);
     
     if (metrics != null) {
@@ -75,7 +72,6 @@ void loadMetrics() {
       JSONArray arr = metrics.getJSONArray("per_frame_metrics");
       totalFrames = arr.size();
       
-      // Test ambil nilai frame 0 untuk debug
       float testP = (float) arr.getJSONObject(0).getDouble("psnr");
       println("✅ SUCCESS! Loaded " + totalFrames + " frames.");
       println("   Frame 0 PSNR: " + testP);
@@ -97,7 +93,6 @@ void useDefaults() {
   metrics = null;
 }
 
-// ================= LOAD FRAMES =================
 void loadFrames() {
   println("🔍 Loading frames...");
   String folder = "/home/jundi-lesmana/nerf_pipeline/results/frames/";
@@ -122,7 +117,6 @@ void loadFrames() {
   println("✅ Loaded " + count + "/" + totalFrames + " frames");
 }
 
-// ================= UI SETUP =================
 void setupUI() {
   cp5.addSlider("frameSlider")
     .setPosition(20, 750)
@@ -151,7 +145,6 @@ void setupUI() {
     .setLabel("Zoom");
 }
 
-// ================= DISPLAY RENDER =================
 void displayRender() {
   pushMatrix();
   translate(width/2, height/2, 0);
@@ -171,9 +164,7 @@ void displayRender() {
   popMatrix();
 }
 
-// ================= METRICS OVERLAY =================
 void displayMetricsOverlay() {
-  // Ambil metrics per-frame
   try {
     if (metrics != null) {
       JSONArray arr = metrics.getJSONArray("per_frame_metrics");
@@ -211,7 +202,6 @@ void displayMetricsOverlay() {
   text("AVG SSIM: " + nf(avgSSIM, 0, 4), 20, 160);
 }
 
-// ================= INFO PANEL (UPDATED - TEXT LEBIH BESAR) =================
 void displayInfoPanel() {
   fill(0, 200);  // Background lebih opaque
   rect(width - 350, 10, 340, 280, 5);  // Box lebih besar
@@ -256,7 +246,6 @@ void displayInfoPanel() {
   text("By: Jundulloh rizki ananda", width - 340, 255);
 }
 
-// ================= EVENT HANDLERS =================
 void frameSlider(float val) {
   currentFrame = (int) val;
 }

@@ -7,9 +7,9 @@
 [![Status](https://img.shields.io/badge/Status-Completed-success?style=flat)]()
 
 > **Penulis:** [Jundulloh rizki ananda](https://github.com/JundiLesmana)  
-> **Institusi:** [Universitas Pamulang]  
-> **Mata Kuliah/Proyek:** [Computer Graphics]  
-> **Tanggal:** [30 Mei 2026]
+> **Institusi:** [Universitas Pamulang](https://unpam.ac.id/)  
+> **Mata Kuliah/Proyek:** Computer Graphics  
+> **Tanggal:** 30 Mei 2026
 
 ---
 

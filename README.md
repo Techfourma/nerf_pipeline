@@ -82,7 +82,7 @@ Project ini dikembangkan sebagai bagian dari tugas akademik untuk mendemonstrasi
 ```text
 NERF_Project/
 │
-├── 📁 src/                          # Source code Python (PyTorch)
+├── 📁 src/                         
 │   ├── dataset.py                   # Loading dataset, pose correction, ray generation
 │   ├── model.py                     # PositionalEncoding class, NeRFModel MLP architecture
 │   ├── renderer.py                  # Volume rendering functions: raw2outputs, render_rays, render_batch
@@ -106,13 +106,13 @@ NERF_Project/
 ├── 📁 checkpoints/                  # Saved model weights
 │   └── nerf_final.pt                # Model state dict setelah training
 │
-├── 📁 dokumentasi/                  # Assets untuk makalah/presentasi
+├── 📁 documentation/                # Assets untuk makalah
 │   ├── screenshots/                 # Screenshot aplikasi & console
 │   ├── summary.txt                  # Ringkasan hasil metrik
-│   └── demo_video.mp4               # Rekaman demo aplikasi (opsional)
+│   └── demo_video.mp4               # Rekaman demo aplikasi
 │
 ├── requirements.txt                 # Python dependencies
-├── README.md                        # Dokumentasi ini
+├── README.md                         
 └── LICENSE                          # Lisensi penggunaan
 ```
 
@@ -488,13 +488,13 @@ Dataset Blender Synthetic dilisensikan di bawah **CC-BY-NC 2.0** oleh Mildenhall
 ## ✉️ Kontak
 
 **Jundulloh Rizki Ananda**  
-📧 [jundulloh2109@gmail.com]  
+📧 [Gmail](jundulloh2109@gmail.com)  
 🔗 [GitHub Profile](https://github.com/JundiLesmana)  
-🎓 [Universitas Pamulang]  
+🎓 [Universitas Pamulang](https://unpam.ac.id/)
 
-*Dibimbing oleh: [DEDE SUPIYAN S.Kom., M.Kom.]*  
-*Mata Kuliah: [Computer Graphics]*  
-*Semester/Tahun: [II - Genap 2025/2026]*
+*Dibimbing oleh: DEDE SUPIYAN S.Kom., M.Kom.*  
+*Mata Kuliah: Computer Graphics*  
+*Semester/Tahun: II - Genap 2025/2026*
 
 ---
 

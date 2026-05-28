@@ -1,0 +1,11 @@
+=== NERF PROJECT SUMMARY ===
+
+Average PSNR: 22.01 dB
+Average SSIM: 0.8105
+Total Frames: 40
+
+Best Frame:
+  Frame 27: PSNR=23.51 dB, SSIM=0.8341
+
+Worst Frame:
+  Frame 35: PSNR=20.24 dB, SSIM=0.7707
